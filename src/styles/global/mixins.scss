@@ -1,0 +1,6 @@
+@mixin media-h-1680 {
+  @media screen and (max-height: 1680px) {
+    @content;
+  }
+}
+

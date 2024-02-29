@@ -1,0 +1,104 @@
+.header{
+  display: grid;
+  grid-template-columns: 2fr 3fr 2fr 0.5fr;
+  background-color: var(--color-white);
+  position: sticky;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.contact{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: rgba(255, 255, 255, 0.35);
+  position: relative;
+
+
+  &:after{
+    content: "";
+    background-image: url("../../../assets/img/paper-bg.jpg");
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
+
+  &__link{
+    font-size: 14px;
+    line-height: 100%;
+    font-weight: 400;
+    font-family: var(--font-secondary);
+    text-transform: lowercase;
+    color: var(--color-pink-dark);
+
+  }
+}
+
+.logo{
+  max-height: 50px;
+
+  &__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.nav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+
+  &__link{
+    font-size: 16px;
+    line-height: 100%;
+    font-weight: 400;
+    font-family: var(--font-primary);
+    text-transform: lowercase;
+    color: var(--color-dark);
+    position: relative;
+
+    &:after{
+      content: '';
+      height: 1px;
+      width: 0;
+      position: absolute;
+      bottom: -5px;
+      background-color: var(--color-pink);
+      left: 0;
+      transition: 0.6s;
+    }
+
+    &:visited {
+      color: var(--color-dark);
+    }
+
+    &:hover{
+      color: var(--color-pink);
+
+      &:after{
+        width: 100%;
+      }
+    }
+  }
+}
+
+.ornament{
+  background-image: radial-gradient(circle at 25px 0, rgba(255, 255, 255, 0) -4000px, #fff 30px, rgba(255, 255, 255, 0) 20px);
+  background-repeat: repeat-x;
+  background-size: 50px 51px;
+  height: 30px;
+  position: absolute;
+  bottom: -30px;
+  width: 100%;
+
+}
